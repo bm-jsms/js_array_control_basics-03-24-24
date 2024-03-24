@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Map</title>
+	</head>
+	<body>
+		<h1>array - map</h1>
+		<ul id="app"></ul>
+		<script>
+			const products = [
+				{
+					title: 'Burger',
+					price: 10,
+				},
+				{
+					title: 'Pizza',
+					price: 15,
+				},
+				{
+					title: 'Sandwich',
+					price: 5,
+				},
+			];
+
+			const app = document.getElementById('app');
+
+			const list = products.map((p) => {
+				return `<li>${p.title} - ${p.price}</li>`;
+			});
+
+			app.innerHTML = list.join('');
+		</script>
+	</body>
+</html>
