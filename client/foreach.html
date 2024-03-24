@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>forEach</title>
+	</head>
+	<body>
+		<h1>array - forEach</h1>
+		<ul id="cont"></ul>
+
+		<script>
+			const products = [
+				{
+					title: 'Burger',
+					price: 10,
+				},
+				{
+					title: 'Pizza',
+					price: 15,
+				},
+				{
+					title: 'Sandwich',
+					price: 5,
+				},
+			];
+
+			const cont = document.getElementById('cont');
+
+			products.forEach((p) => {
+				cont.innerHTML += `
+			        <li>${p.title} - ${p.price}</li>
+			    `;
+			});
+		</script>
+	</body>
+</html>
