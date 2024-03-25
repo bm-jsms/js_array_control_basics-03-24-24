@@ -54,3 +54,23 @@ const rta2 = data
 	}, {});
 
 console.log(rta2);
+
+const itm = [1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 10, 10, 9, 10, 7, 10, 10, 10, 10];
+
+const rta3 = itm.reduce(
+	(obj, i) => {
+		if (obj['1-5'] <= 5) {
+			obj['1-5'] += 1;
+		} else {
+			obj['6-10'] += 1;
+		}
+
+		return obj;
+	},
+	{
+		'1-5': 0,
+		'6-10': 0,
+	},
+);
+
+console.log(rta3);
