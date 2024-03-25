@@ -59,7 +59,7 @@ const itm = [1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 10, 10, 9, 10, 7, 10, 10, 10, 10];
 
 const rta3 = itm.reduce(
 	(obj, i) => {
-		if (obj['1-5'] <= 5) {
+		if (i <= 5) {
 			obj['1-5'] += 1;
 		} else {
 			obj['6-10'] += 1;
@@ -74,3 +74,59 @@ const rta3 = itm.reduce(
 );
 
 console.log(rta3);
+
+const data2 = [
+	{
+		name: 'Nicolas',
+		level: 'low',
+		age: 23,
+	},
+	{
+		name: 'Andrea',
+		level: 'medium',
+		age: 27,
+	},
+	{
+		name: 'Zulema',
+		level: 'hight',
+		age: 89,
+	},
+	{
+		name: 'Santiago',
+		level: 'low',
+		age: 15,
+	},
+	{
+		name: 'Valentina',
+		level: 'medium',
+		age: 19,
+	},
+	{
+		name: 'Lucia',
+		level: 'hight',
+		age: 26,
+	},
+];
+
+const rta5 = data2
+	.map((i) => i.age)
+	.reduce(
+		(obj, i) => {
+			if (i <= 20) {
+				obj['0-20'] += 1;
+			} else if (i <= 40) {
+				obj['21-40'] += 1;
+			} else {
+				obj['41-100'] += 1;
+			}
+
+			return obj;
+		},
+		{
+			'0-20': 0,
+			'21-40': 0,
+			'41-100': 0,
+		},
+	);
+
+console.log(rta5);
