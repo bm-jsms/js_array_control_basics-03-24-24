@@ -1,4 +1,4 @@
-const array = ['Hola', 'Mundo', 1, 2, 3, 4];
+const array = ['Hello', 'World'];
 
 const rst = array.join(' - ');
 
